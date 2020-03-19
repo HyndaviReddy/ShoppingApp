@@ -13,7 +13,7 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private int prod_id;
 	
 	@Column(name="prod_name")
 	private String prodName;
@@ -25,20 +25,21 @@ public class Product {
 		
 	}
 
-	public Product(int id, String prdName) {
-		this.id = id;
+	public Product(int prod_id, String prdName) {
+		this.prod_id = prod_id;
 		this.prodName = prdName;
 	}
 	
-	public int getId() {
-		return id;
+	
+
+
+	public int getProd_id() {
+		return prod_id;
 	}
 
-
-	public void setId(int id) {
-		this.id = id;
+	public void setProd_id(int prod_id) {
+		this.prod_id = prod_id;
 	}
-
 
 	public String getPrdName() {
 		return prodName;
@@ -51,9 +52,10 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", prdName=" + prodName + "]";
+		return "Product [prod_id=" + prod_id + ", prodName=" + prodName + ", prodPrice=" + prodPrice + "]";
 	}
 
+	
 
 	
 

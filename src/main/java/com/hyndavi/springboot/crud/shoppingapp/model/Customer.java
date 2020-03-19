@@ -14,7 +14,7 @@ public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private int cust_id;
 	
 	@Column(name="first_name")
 	private String first_name;
@@ -27,18 +27,20 @@ public class Customer {
 		
 	}
 
-	public Customer(int id, String first_name, String last_name) {
-		this.id = id;
+	public Customer(int cust_id, String first_name, String last_name) {
+		this.cust_id = cust_id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 	}
 
-	public int getId() {
-		return id;
+	
+
+	public int getCust_id() {
+		return cust_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCust_id(int cust_id) {
+		this.cust_id = cust_id;
 	}
 
 	public String getFirst_name() {
@@ -59,9 +61,11 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + "]";
+		return "Customer [cust_id=" + cust_id + ", first_name=" + first_name + ", last_name=" + last_name + "]";
 	}
+
 	
+
 	
 	
 	

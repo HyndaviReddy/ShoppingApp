@@ -11,10 +11,13 @@ import javax.persistence.Table;
 @Table(name="order")
 public class Order {
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private int cust_id;
+	
+	@Id
 	@Column(name="order_id")
+	
 	private int orderId;
 	@Column(name="prod_id")
 	private int prodId;
@@ -23,17 +26,18 @@ public class Order {
 	public Order() {
 	
 	}
-	public Order(int id, int orderId, int prodId) {
+	public Order(int cust_id, int orderId, int prodId) {
 	
-		this.id = id;
+		this.cust_id = cust_id;
 		this.orderId = orderId;
 		this.prodId = prodId;
 	}
-	public int getId() {
-		return id;
+	
+	public int getCust_id() {
+		return cust_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCust_id(int cust_id) {
+		this.cust_id = cust_id;
 	}
 	public int getOrderId() {
 		return orderId;
@@ -47,10 +51,13 @@ public class Order {
 	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
+	
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", orderId=" + orderId + ", prodId=" + prodId + "]";
+		return "Order [cust_id=" + cust_id + ", orderId=" + orderId + ", prodId=" + prodId + "]";
 	}
+	
+	
 	
 	
 
