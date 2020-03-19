@@ -18,6 +18,9 @@ public class Product {
 	@Column(name="prod_name")
 	private String prodName;
 	
+	@Column(name="prod_price")
+	private int prodPrice;
+	
 	public Product() {
 		
 	}
