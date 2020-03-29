@@ -13,5 +13,5 @@ public List<Order> findAll();
 	
 	public void save(Order theOrder);
 	
-	public void deleteById(int theId);
+	
 }
